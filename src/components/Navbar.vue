@@ -120,7 +120,7 @@
       const navItems = computed(() => [
         { key: 'home', path: '/', name: t('home') },
         { key: 'about', path: '/about', name: t('about') },
-        { key: 'daftarHarga', path: '/daftar-harga', name: t('daftarHarga') },
+        { key: 'daftarHarga', path: '/price-list', name: t('daftarHarga') },
         { key: 'service', path: '/service', name: t('service') },
         { key: 'contact', path: '/contact', name: t('contact') },
       ])
