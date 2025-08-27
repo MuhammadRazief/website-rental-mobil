@@ -1,96 +1,120 @@
 <template>
-    <div class="container">
-    <section class="features">
-        <div class="features-grid">
-          <div class="feature-card">
-            <img src="@/assets/Armada.png" alt="Armada Lengkap" />
-            <p>Armada Lengkap</p>
+  <div class="container">
+  <section class="features">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon-circle">
+            <i class="fa-solid fa-truck"></i>
           </div>
-          <div class="feature-card">
-            <img src="@/assets/Harga.png" alt="Harga Terjangkau" />
-            <p>Harga Terjangkau</p>
-          </div>
-          <div class="feature-card">
-            <img src="@/assets/Service.png" alt="Layanan Cepat" />
-            <p>Layanan Cepat</p>
-          </div>
-          <div class="feature-card">
-            <img src="@/assets/Jangkauan.png" alt="Jangkauan Luas" />
-            <p>Jangkauan Luas</p>
-          </div>
+          <p>Armada Lengkap</p>
         </div>
+        <div class="feature-card">
+          <div class="icon-circle">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <p>Harga Terjangkau</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-circle">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <p>Layanan Cepat</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-circle">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <p>Jangkauan Luas</p>
+        </div>
+      </div>
     </section>
-</div>
-  </template>
-  
-  <script>
-  export default {
-    name: "FeaturesSection",
-  };
-  </script>
-  
-  <style scoped>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "FeaturesSection",
+};
+</script>
+<style scoped>
 .features {
-  /* margin: 20px; */
   margin-top: 50px;
-  width: 100%; /* pastikan full layar */
-  background-color: #ffffff; /* merah */
-  padding: 20px 0;
-  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-  border-radius: 12px;
-}
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   
-  /* Grid fitur - tetap satu baris */
-  .features-grid {
+  width: 100%;
+}
+
+.features-grid {
   display: flex;
-  justify-content: space-between; /* card tersebar rapi */
-  flex-wrap: nowrap; /* tetap 1 baris */
-  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 8px;
 }
-  
+
 .feature-card {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  flex: 1 1 0; /* fleksibel, otomatis mengecil */
-  max-width: 250px; /* tetap batasi maksimal */
+  flex: 1 1 0;
+  max-width: 250px;
   padding: 12px 10px;
   border-radius: 12px;
 }
+
+.icon-circle {
+  background: var(--primary-color); /* default: putih */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.icon-circle i {
+  font-size: 35px;
+  color: var(--text-white);
+}
+
+.feature-card p {
+  font-size: 16px;
   
-  .feature-card img {
-    width: 50px;
-    height: 50px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Tablet besar (iPad Mini, dsb) */
+@media (max-width: 992px) {
+  .icon-circle {
+    width: 55px;
+    height: 55px;
   }
-  
+  .icon-circle i {
+    font-size: 24px;
+  }
   .feature-card p {
     font-size: 14px;
-    font-weight: 500;
-    color: #0D5EA6;
-    margin: 0;
   }
-  
-  @media (max-width: 768px) {
+}
+
+/* Tablet kecil / mobile besar */
+@media (max-width: 767px) {   /* ← ganti dari 768 ke 767 */
   .features-grid {
-    justify-content: space-around; /* lebih dekat antar card */
-    gap: 0; /* gap antar card lebih kecil */
+    gap: 0;
   }
 
-  .feature-card {
-    flex: 1 1 auto; /* card menyesuaikan lebar layar */
-    max-width: 80px; /* opsional, lebih kecil agar semua muat */
-    padding: 8px 4px; /* jarak kiri-kanan card lebih kecil */
-    flex-direction: column;
-    text-align: center;
-    gap: 2px; /* jarak icon ke teks */
+  .icon-circle {
+    width: 40px;
+    height: 40px;
   }
 
-  .feature-card img {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 2px;
+  .icon-circle i {
+    font-size: 18px;
   }
 
   .feature-card p {
@@ -98,19 +122,63 @@
   }
 }
 
-
 @media (max-width: 480px) {
+
+  .features {
+    background-color: #fff !important;
+    box-shadow: none !important; 
+    margin-top: 20px;
+    /* padding: 5px; */
+  }
   .feature-card {
-    padding: 8px 10px; /* jarak kiri-kanan sedikit lebih kecil */
+    flex: 1 1 auto;
+    max-width: 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
   }
-  .feature-card img {
-    width: 50px;
-    height: 40px;
+
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+    /* background: #0D5EA6; */
   }
+
+  .icon-circle i {
+    font-size: 20px;
+  }
+
   .feature-card p {
     font-size: 13px;
+    color: #0D5EA6;
   }
 }
 
-  </style>
-  
+@media (max-width: 320px) {  /* iPhone 5 */
+  .feature-card {
+    flex: 1 1 auto;       /* card fleksibel tapi tetap 1 baris */
+    max-width: 60px;      /* kecil agar semua muat */
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    text-align: center;
+  }
+
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-circle i {
+    font-size: 20px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+    color: #0D5EA6;
+  }
+}
+
+
+</style>

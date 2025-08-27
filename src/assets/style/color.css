@@ -2,10 +2,15 @@
     --primary-color: #0D5EA6;
     --primary-hover: #97abe3;
     --text-color: #1e293b;
-    --text-light: #64748b;
+    --text-light: #d4dae1;
 
 
     /* footer */
     --text-white: #ffffff;
     --text-hover: #6d93e4;
+
+    /* cta */
+
+    --secondary-color: #2563eb;
+    --accent-color: #22c55e;
 }

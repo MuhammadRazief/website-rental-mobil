@@ -173,7 +173,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     z-index: 1000;
     color: var(--text-color);

@@ -37,6 +37,7 @@
       const banners = [
         require('@/assets/Banner-01.png'),
         require('@/assets/Banner-02.png'),
+        require('@/assets/Banner-03.png'),
       ]
   
       const currentIndex = ref(0)
@@ -193,8 +194,12 @@
   @media (max-width: 768px) {
     .carousel-container {
         max-height: 250px;
+        min-height: 100px;
         aspect-ratio: 16/6;
     }
+    .dots {
+    margin-top: 15px; /* tablet lebih rapat */
+  }
     .dot { height: 10px; width: 10px; margin: 0 3px; }
   }
   
@@ -202,7 +207,15 @@
     .carousel-container {
         max-height: 200px;
         aspect-ratio: 16/6;
+        min-height: 100px;
     }
+    .dots {
+    margin-top: 15px; /* tablet lebih rapat */
+  }
+    .carousel-container img {
+    object-fit: cover;
+    object-position: top; /* gambar ditarik lebih ke atas */
+  }
     .dot { height: 8px; width: 8px; margin: 0 2px; }
   }
   </style>

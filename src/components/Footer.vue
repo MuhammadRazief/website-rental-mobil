@@ -70,11 +70,11 @@
       ]);
   
       const description =
-        "Renta Mobil Jakarta merupakan platform modern untuk menghubungkan ide, inovasi, dan teknologi dalam satu ekosistem yang saling terhubung.";
-  
+      "Rental Mobil Jakarta adalah layanan penyewaan mobil terpercaya yang menyediakan berbagai pilihan kendaraan dengan harga terjangkau untuk kebutuhan perjalanan Anda.";
+
       const contactInfo = [
         { icon: "fas fa-map-marker-alt", text: "Jl. Teknologi No. 123, Jakarta, Indonesia" },
-        { icon: "fas fa-phone", text: "+62 812-3456-7890" },
+        { icon: "fas fa-phone", text: "+62 821-5877-6807" },
         { icon: "fas fa-envelope", text: "info@Rental Mobil Jakarta.com" },
         { icon: "fas fa-clock", text: "Senin - Jumat: 08:00 - 17:00" },
       ];
@@ -234,6 +234,7 @@
             color: #fff;
             font-size: 18px;
             transition: all 0.3s;
+            text-decoration: none;
         }
 
         .social-links a:hover {
