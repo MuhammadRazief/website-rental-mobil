@@ -125,7 +125,7 @@
         { key: 'contact', path: '/contact', name: t('contact') },
       ])
   
-      const handleScroll = () => (scrolled.value = window.scrollY > 10)
+      const handleScroll = () => (scrolled.value = window.scrollY > 0)
       
       onMounted(() => {
         window.addEventListener('scroll', handleScroll)
@@ -167,24 +167,24 @@
     --transition: all 0.3s ease;
   }
   
-  /* Navbar Base */
   .navbar {
     position: fixed;
-    top: 0;
+    top: 50px; /* ganti 50px sesuai tinggi top navbar */
     left: 0;
     width: 100%;
     background: #fff;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
     z-index: 1000;
-    color: var(--text-color);
-  }
-  
-  .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: var(--shadow);
-  }
-  
+}
+
+/* Saat discroll */
+.navbar.scrolled {
+    top: 0; /* tetap di bawah top navbar */
+    /* background: rgba(255, 255, 255, 0.95); */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
   .navbar.menu-open {
     background: var(--bg-color);
   }
@@ -460,6 +460,9 @@
   
   /* Responsive */
   @media (max-width: 768px) {
+    .navbar{
+      top: 0;
+    }
     .navbar-container {
       padding: 0 1.5rem;
     }

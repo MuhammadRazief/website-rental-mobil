@@ -1,7 +1,9 @@
 <template>
     <div class="home">
-      <!-- Banner -->
-      <Banner />
+      <PageHeader
+        title="Daftar Harga"
+        subTitle="Home - Daftar Harga"
+      />
   
       <!-- Daftar Mobil Section -->
       <section class="cars">
@@ -21,12 +23,12 @@
   </template>
   
   <script>
-  import Banner from "@/components/Banner.vue";
+  import PageHeader from "@/components/PageHeader.vue";
   
   export default {
     name: "HomePage",
     components: {
-      Banner,
+      PageHeader,
     },
     data() {
       return {
@@ -78,14 +80,7 @@
   </script>
   
   <style scoped>
-  .home {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 100px 0;
-    align-items: center;
-    overflow-x: hidden;
-  }
+
   
   /* Daftar Mobil Section */
   .cars {

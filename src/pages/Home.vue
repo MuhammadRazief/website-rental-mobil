@@ -4,7 +4,7 @@
     <Carousel />
     <!-- Features Section -->
     <FeaturesSection />
-    <Home />
+    <Features />
         <!-- Daftar Mobil Section -->
         <DaftarMobil />
     <!-- Call to Action Section -->
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Home from "@/components/Home.vue";
+import Features from "@/components/about/Features.vue";
 import Carousel from "@/components/Carousel.vue";
 import FeaturesSection from "@/components/Features.vue";
 import CtaSection from "@/components/Cta.vue";
@@ -27,17 +27,22 @@ export default {
     FeaturesSection,
     CtaSection,
     DaftarMobil,
-    Home,
+    Features,
   },
 };
 </script>
 
 <style scoped>
+.home > :nth-child(2), /* FeaturesSection */
+.home > :nth-child(3)  /* Features */
+{
+  margin-bottom: 20px;
+}
+
 .home {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   padding-top: 100px;
+  /* margin-bottom: 560px; */
   padding-bottom: 0; /* hapus padding bawah */
   align-items: center;
   overflow-x: hidden;

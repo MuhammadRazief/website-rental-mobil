@@ -1,24 +1,26 @@
 <template>
   <div class="about-section">
     <PageHeader
-  title="Tentang Kami"
-  subtitle="Selamat datang di halaman About"
-  description="Kami memberikan solusi terbaik untuk bisnis Anda."
-/>
+      title="Tentang Kami"
+      subTitle="Home / Tentang Kami"
+    />
 
     <About />
+    <Features />
   </div>
 </template>
 
 <script>
-import About from '@/components/About.vue';
+import About from '@/components/about/About.vue';
 import PageHeader from '@/components/PageHeader.vue';
+import Features from '@/components/about/Features.vue';
 
 export default {
   name: 'AboutSection',
   components: {
     About,
     PageHeader,
+    Features
   }
 }
 </script>

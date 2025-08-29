@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TopNavbar v-if="showMainLayout" />
     <Navbar v-if="showMainLayout" />
     <Whatsapp v-if="showMainLayout" />
     <Scroll v-if="showMainLayout" />
@@ -14,13 +15,14 @@
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import Navbar from './components/Navbar.vue';
+import TopNavbar from './components/TopNavbar.vue';
 import Footer from './components/Footer.vue';
 import Whatsapp from './components/Whatsapp.vue';
 import Scroll from './components/Scroll.vue';
 
 export default {
   name: 'App',
-  components: { Navbar, Footer, Whatsapp, Scroll },
+  components: { Navbar, Footer, Whatsapp, Scroll, TopNavbar },
   setup() {
     const route = useRoute();
 
