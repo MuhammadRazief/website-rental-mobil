@@ -28,8 +28,15 @@
                         </div>
                     </div>
     
-                    <!-- CTA -->
-                    <button class="cta-btn">Lihat Armada</button>
+                    <div class="cta-buttons">
+                    <router-link to="/price-list">
+                        <button class="cta-btn">Daftar Harga</button>
+                    </router-link>
+                    <router-link to="/service">
+                        <button class="cta2-btn">Layanan Kami</button>
+                    </router-link>
+                    </div>
+
                 </div>
                 
                 <!-- Gambar (sekarang di bawah pada mobile) -->
@@ -140,6 +147,11 @@
         }
         
         /* CTA */
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
         .cta-btn {
             margin: 10px 0 0 0;
             padding: 16px 32px;
@@ -158,6 +170,25 @@
         .cta-btn:hover {
             background: #fff;
             color: var(--primary-color);
+        }
+        .cta2-btn {
+            margin: 10px 0 0 0;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .cta2-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
         }
         
         /* Responsif */

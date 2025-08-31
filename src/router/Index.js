@@ -4,6 +4,7 @@ import Home from '../pages/Home.vue'
 import About from '@/pages/About.vue'
 import Kontak from '../pages/Kontak.vue'
 import DaftarHarga from '@/pages/DaftarHarga.vue'
+import Layanan from '@/pages/Layanan.vue'
 
 import Login from '@/components/Login.vue'
 
@@ -13,7 +14,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'Home' // 👈 title khusus untuk halaman ini
+      title: 'Rental Mobil Jakarta - Home' // 👈 title khusus untuk halaman ini
     }
   },
   {
@@ -42,6 +43,14 @@ const routes = [
     }
   },
   {
+    path: '/service',
+    name: 'Service',
+    component: Layanan,
+    meta: {
+      title: 'Service' // 👈 title khusus untuk halaman ini
+    }
+  },
+  {
     path: '/login-admin',
     name: 'Login',
     component: Login,
@@ -54,7 +63,10 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(){
+    window.scrollTo(0,0);
+  }
 })
 
 
